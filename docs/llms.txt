@@ -1,0 +1,170 @@
+# alquRanid
+
+**Data Al-Qur’an berbahasa Indonesia untuk R dan Quarto.**
+
+`alquRanid` menyediakan teks Al-Qur’an dalam bahasa Arab beserta
+terjemahan bahasa Indonesia dalam format yang mudah digunakan. Paket ini
+menyediakan API sederhana dengan nama fungsi dalam Bahasa Indonesia
+untuk mengambil surat, ayat, dan melakukan pencarian pada terjemahan
+Al-Qur’an.
+
+## Instalasi
+
+Versi pengembangan dapat diinstal dari GitHub:
+
+``` r
+
+# install.packages("pak")
+pak::pak("yandiandiyana.github.io/alquRanid")
+```
+
+## Memulai
+
+Muat paket dengan:
+
+``` r
+
+library(alquRanid)
+```
+
+### Mengambil satu ayat
+
+Gunakan
+[`ayat()`](https://yandiandiyana.github.io/alquRanid/reference/ayat.md)
+untuk mengambil satu ayat:
+
+``` r
+
+ayat(2, 255)
+```
+
+Hasilnya berisi:
+
+- `surat` — nomor surat
+- `ayat` — nomor ayat
+- `teks_ar` — teks Al-Qur’an dalam bahasa Arab
+- `teks_id` — terjemahan bahasa Indonesia
+
+### Mengambil beberapa ayat
+
+Beberapa ayat dapat diambil sekaligus:
+
+``` r
+
+ayat(114, 1:3)
+```
+
+Ayat tertentu juga dapat dipilih:
+
+``` r
+
+ayat(114, c(1, 3, 6))
+```
+
+Hasil akan dikembalikan mengikuti urutan ayat dalam Al-Qur’an.
+
+### Mengambil satu surat
+
+Gunakan
+[`surat()`](https://yandiandiyana.github.io/alquRanid/reference/surat.md)
+untuk mengambil seluruh ayat dalam sebuah surat:
+
+``` r
+
+surat(1)
+```
+
+### Mencari dalam terjemahan
+
+Gunakan
+[`cari()`](https://yandiandiyana.github.io/alquRanid/reference/cari.md)
+untuk mencari kata atau frasa dalam terjemahan bahasa Indonesia:
+
+``` r
+
+cari("rahmat")
+```
+
+Hasil pencarian mencakup terjemahan bahasa Indonesia dan teks Arab dari
+ayat yang sesuai.
+
+## Menggunakan alquRanid dengan Quarto
+
+`alquRanid` dirancang agar data Al-Qur’an mudah digunakan dalam dokumen
+berbasis R, termasuk:
+
+- buku Quarto
+- artikel
+- blog
+- laporan
+- presentasi
+- analisis Al-Qur’an
+
+Sebagai contoh:
+
+``` r
+
+ayat(2, 255)
+```
+
+dapat digunakan untuk mengambil teks Arab dan terjemahan bahasa
+Indonesia, kemudian ditampilkan atau diolah lebih lanjut dalam dokumen
+Quarto.
+
+## Fungsi utama
+
+Fungsi yang tersedia saat ini:
+
+- [`surat()`](https://yandiandiyana.github.io/alquRanid/reference/surat.md)
+  — mengambil seluruh ayat dalam sebuah surat
+- [`ayat()`](https://yandiandiyana.github.io/alquRanid/reference/ayat.md)
+  — mengambil satu atau beberapa ayat
+- [`cari()`](https://yandiandiyana.github.io/alquRanid/reference/cari.md)
+  — mencari kata atau frasa dalam terjemahan bahasa Indonesia
+
+## Data
+
+Data yang tersedia saat ini mencakup:
+
+- teks Al-Qur’an dalam bahasa Arab
+- terjemahan Al-Qur’an dalam bahasa Indonesia
+
+Data disusun berdasarkan `surat` dan `ayat`, sehingga teks Arab dan
+terjemahan bahasa Indonesia tetap terhubung pada ayat yang sama.
+
+## Status pengembangan
+
+`alquRanid` masih dalam tahap pengembangan.
+
+Pengembangan paket saat ini berfokus pada:
+
+- data Al-Qur’an yang terstruktur dan konsisten
+- API sederhana dengan nama fungsi dalam Bahasa Indonesia
+- analisis Al-Qur’an menggunakan R
+- penggunaan data Al-Qur’an dalam Quarto
+
+## Lisensi dan sumber data
+
+Informasi mengenai lisensi dan izin distribusi terjemahan bahasa
+Indonesia yang digunakan dalam paket ini sedang diklarifikasi dengan
+pihak terkait.
+
+Informasi sumber dan ketentuan penggunaan akan dicantumkan secara lebih
+lengkap sebelum rilis publik.
+
+## Sitasi
+
+Informasi mengenai cara mengutip `alquRanid` akan ditambahkan menjelang
+rilis pertama paket.
+
+# Package index
+
+## All functions
+
+- [`ayat()`](https://yandiandiyana.github.io/alquRanid/reference/ayat.md)
+  : Ambil satu ayat dari Al-Qur'an
+- [`cari()`](https://yandiandiyana.github.io/alquRanid/reference/cari.md)
+  : Cari kata atau frasa dalam terjemahan Al-Qur'an
+- [`surat()`](https://yandiandiyana.github.io/alquRanid/reference/surat.md)
+  : Ambil satu surat dari Al-Qur'an
+

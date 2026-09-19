@@ -1,0 +1,8 @@
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj.user
+
+# Raw Quran source files — keep local until redistribution rights are confirmed
+data-raw/*.txt
