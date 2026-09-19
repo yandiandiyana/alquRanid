@@ -2,7 +2,11 @@ Package: alquRanid
 Title: Indonesian Quran Data for R and Quarto
 Version: 0.0.0.9000
 Authors@R:
-  person("Yandi", "Andiyana", email = "e-mail = artofmuslimness@gmail.com", role = c("aut", "cre"))
+  person(
+    "Yandi", "Andiyana",
+    email = "artofmuslimness@gmail.com",
+    role = c("aut", "cre")
+  )
 Description: Provides Indonesian Quran translation and Arabic Quran text for
   access, search, analysis, and use in Quarto documents. The package
   provides functions for retrieving individual verses or surahs and
