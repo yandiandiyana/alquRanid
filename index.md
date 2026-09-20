@@ -1,6 +1,6 @@
 # alquRanid
 
-**Data Al-Qur’an berbahasa Indonesia untuk R dan Quarto.**
+\*\* Al-Qur’an dan terjemahan bahasa Indonesia di R.\*\*
 
 `alquRanid` menyediakan teks Al-Qur’an dalam bahasa Arab beserta
 terjemahan bahasa Indonesia dalam format yang mudah digunakan. Paket ini

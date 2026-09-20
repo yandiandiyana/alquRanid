@@ -6,12 +6,12 @@
 
 ## Citation
 
-Andiyana Y (2026). *alquRanid: Indonesian Quran Data for R and Quarto*.
-R package version 0.0.0.9000,
+Andiyana Y (2026). *alquRanid: Al-Qur'an and Indonesian Translation in
+R*. R package version 0.0.0.9000,
 <https://yandiandiyana.github.io/alquRanid/>.
 
     @Manual{,
-      title = {alquRanid: Indonesian Quran Data for R and Quarto},
+      title = {alquRanid: Al-Qur'an and Indonesian Translation in R},
       author = {Yandi Andiyana},
       year = {2026},
       note = {R package version 0.0.0.9000},
