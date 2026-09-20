@@ -3,3 +3,5 @@
 export(ayat)
 export(cari)
 export(surat)
+export(tulis_ayat)
+export(tulis_ayat_fragmen)

@@ -2,26 +2,20 @@
 % Please edit documentation in R/ayat.R
 \name{ayat}
 \alias{ayat}
-\title{Ambil satu ayat dari Al-Qur'an}
+\title{Mengambil teks ayat Al-Qur'an}
 \usage{
 ayat(nomor_surat, nomor_ayat)
 }
 \arguments{
-\item{nomor_surat}{Nomor surat, dari 1 sampai 114.}
+\item{nomor_surat}{Nomor surat Al-Qur'an.}
 
-\item{nomor_ayat}{Nomor ayat, berupa satu angka atau beberapa angka.}
+\item{nomor_ayat}{Nomor ayat atau beberapa nomor ayat.}
 }
 \value{
-Data frame dengan satu baris berisi nomor surat,
-nomor ayat, dan terjemahan Indonesia.
+Data frame berisi nomor surat, nomor ayat, teks Arab,
+dan terjemahan bahasa Indonesia.
 }
 \description{
-Mengembalikan satu ayat berdasarkan nomor surat dan nomor ayat.
-}
-\examples{
-ayat(1, 1)
-ayat(2, 255)
-ayat(114, 1:3)
-ayat(2, c(255, 256))
-
+Mengambil teks Arab dan terjemahan bahasa Indonesia berdasarkan
+nomor surat dan nomor ayat.
 }

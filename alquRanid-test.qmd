@@ -1,0 +1,17 @@
+---
+title: "Mencoba alquRanid"
+format: html
+---
+
+## Catatan Kecil
+
+Catatan hari ini, saya ingin merenungi sebuah ayat.
+
+Ayat ini begitu menusuk saat saya membacanya.
+
+```{r}
+library(alquRanid)
+
+tulis_ayat(90, 10)
+```
+

@@ -1,19 +1,13 @@
-#' Ambil satu ayat dari Al-Qur'an
+#' Mengambil teks ayat Al-Qur'an
 #'
-#' Mengembalikan satu ayat berdasarkan nomor surat dan nomor ayat.
+#' Mengambil teks Arab dan terjemahan bahasa Indonesia berdasarkan
+#' nomor surat dan nomor ayat.
 #'
-#' @param nomor_surat Nomor surat, dari 1 sampai 114.
-#' @param nomor_ayat Nomor ayat, berupa satu angka atau beberapa angka.
+#' @param nomor_surat Nomor surat Al-Qur'an.
+#' @param nomor_ayat Nomor ayat atau beberapa nomor ayat.
 #'
-#' @return Data frame dengan satu baris berisi nomor surat,
-#'   nomor ayat, dan terjemahan Indonesia.
-#'
-#' @examples
-#' ayat(1, 1)
-#' ayat(2, 255)
-#' ayat(114, 1:3)
-#' ayat(2, c(255, 256))
-#'
+#' @return Data frame berisi nomor surat, nomor ayat, teks Arab,
+#'   dan terjemahan bahasa Indonesia.
 #' @export
 ayat <- function(nomor_surat, nomor_ayat) {
 
@@ -47,6 +41,9 @@ ayat <- function(nomor_surat, nomor_ayat) {
     stop("nomor_ayat harus berupa bilangan positif.")
   }
 
+  # Ambil dataset paket
+  data("alquran", package = "alquRanid")
+
   # Ambil ayat
   hasil <- alquran[
     alquran$surat == nomor_surat &
@@ -55,7 +52,7 @@ ayat <- function(nomor_surat, nomor_ayat) {
     drop = FALSE
   ]
 
-  # Ayat tidak ditemukan
+  # Validasi hasil
   if (nrow(hasil) == 0) {
     stop(
       sprintf(
@@ -66,11 +63,7 @@ ayat <- function(nomor_surat, nomor_ayat) {
     )
   }
 
-  # Pastikan semua ayat yang diminta ditemukan
-  ayat_tidak_ditemukan <- setdiff(
-    nomor_ayat,
-    hasil$ayat
-  )
+  ayat_tidak_ditemukan <- setdiff(nomor_ayat, hasil$ayat)
 
   if (length(ayat_tidak_ditemukan) > 0) {
     stop(
@@ -82,10 +75,8 @@ ayat <- function(nomor_surat, nomor_ayat) {
     )
   }
 
-  # Urutkan sesuai urutan ayat dalam Al-Qur'an
   hasil <- hasil[order(hasil$ayat), , drop = FALSE]
 
-  # Reset row names
   rownames(hasil) <- NULL
 
   hasil
